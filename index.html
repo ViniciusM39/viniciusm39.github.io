@@ -49,15 +49,114 @@
     <!-- Degradê entre Seção 2 e Seção 3 -->
     <div class="section-gradient2"></div>
 
-    <!-- Seção 3 -->
+    <!-- Seção 3 com perguntas e respostas -->
     <div class="section-white">
-        <h2>Seção 3</h2>
-        <p>Conteúdo da terceira seção vai aqui.</p>
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Qual a carga horária mínima?</h3>
+            <button class="toggle-answer">+</button>
+            <div class="answer">
+                <p>1200 horas
+
+                O curso dura, em média, 1 ano e meio.
+
+                O curso, na modalidade presencial, poderá prever até 20% da sua carga horária total em atividades não presenciais.
+
+                O curso poderá ser realizado na modalidade EaD com, no mínimo, 20% de sua carga horária em atividades presenciais, nos termos das normas específicas definidas em cada sistema de ensino.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Quais os pré-requisitos para ingresso?</h3>
+            <button class="toggle-answer">+</button>
+            <div class="answer">
+                <p>Para ingresso no Curso Técnico Subsequente, o estudante deverá ter concluído o Ensino Médio.
+
+                Para ingresso no Curso Técnico Concomitante, o estudante deverá estar cursando o Ensino Médio.
+
+                Para ingresso no Curso Técnico Integrado ao Ensino Médio, o estudante deverá ter concluído o Ensino Fundamental.
+
+                Para ingresso no Curso Técnico Integrado à Educação de Jovens e Adultos, o estudante deverá ter concluído o Ensino Fundamental.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Quais os campos de atuação?</h3>
+            <button class="toggle-answer">+</button>
+            <div class="answer">
+                <p>Locais e ambientes de trabalho:
+
+                Empresas de desenvolvimento de sistemas
+                Departamento de desenvolvimento de sistemas em organizações governamentais e não governamentais
+                Empresas de consultoria em sistemas</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Qual a infraestrutura mínima?</h3>
+            <button class="toggle-answer">+</button>
+            <div class="answer">
+                <p>Biblioteca com acervo físico ou virtual específico e atualizado
+
+                Laboratório de informática com programas específicos</p>
+            </div>
+        </div>
+        <!-- Adicione mais perguntas e respostas conforme necessário -->
     </div>
 
-    <div class="section-black">
-        <h2>Seção 4</h2>
-        <p>Conteúdo da quarta seção vai aqui.</p>
+    <!-- Degradê entre Seção 3 e Seção 4 -->
+    <div class="section-gradient3"></div>
+
+    <!-- Seção 4 com feedbacks do mundo -->
+    <div class="section-white">
+        <h2 class="section-title">FEEDBACKS PELO MUNDO</h2>
+        <div class="course-review-card">
+            <div class="review-avatar">
+                <img src="https://media.newyorker.com/photos/64bc4330ef09d4a0e04cb249/3:4/w_1278,h_1704,c_limit/Rosen-Messi-Miami.jpg" alt="Avatar do Avaliador">
+            </div>
+            <div class="review-content">
+                <h3>Lionel Messi</h3>
+                <div class="star-rating">
+                    <!-- Substitua a largura abaixo pela porcentagem de classificação (0-100%) -->
+                    <div class="star-rating-filled" style="width: 80%;"></div>
+                </div>
+                <p class="review-text">M'agradava el curs, quan era petit volia ser desenvolupador, aquest curs m'està ajudant molt, visca Barça i visca ivb</p>
+            </div>
+        </div>
+        <!-- Adicione mais feedbacks conforme necessário -->
     </div>
+
+    <!-- Degradê entre Seção 4 e Seção 5 -->
+    <div class="section-gradient4"></div>
+
+    <!-- Seção 5 com informações de contato -->
+    <div class="section-contact">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para mais informações sobre o curso:</p>
+        <ul class="contact-info">
+            <li>Email: exemplo@email.com</li>
+            <li>Telefone: (00) 1234-5678</li>
+            <li>Endereço: Rua Exemplo, 1234, Cidade, Estado</li>
+        </ul>
+    </div>
+
+    <script>
+        // Seleciona todos os botões de toggle
+        const toggleButtons = document.querySelectorAll('.toggle-answer');
+
+        // Adiciona um evento de clique a cada botão de toggle
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Encontra a div irmã que contém a resposta
+                const answer = button.nextElementSibling;
+
+                // Alterna a visibilidade da resposta
+                if (answer.style.display === 'block' || answer.style.display === '') {
+                    answer.style.display = 'none';
+                    button.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    button.textContent = '-';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
